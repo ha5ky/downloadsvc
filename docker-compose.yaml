@@ -1,0 +1,15 @@
+version: "2"
+services:
+  download-svc:
+    env_file:
+      - .env
+    build:
+      dockerfile: Dockerfile
+      context: svc
+    container_name: download-svc
+    restart: always
+    volumes:
+      - ${STORAGE_PATH}:${STORAGE_PATH}
+    ports:
+      - "${SERVICE_PORT}:${SERVICE_PORT}"
+    command: ["./svc"]

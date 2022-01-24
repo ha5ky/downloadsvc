@@ -1,0 +1,4 @@
+mode: dev # dev -- development mode; test -- test mode
+
+storePath: /home/store
+svcPort: 8999
